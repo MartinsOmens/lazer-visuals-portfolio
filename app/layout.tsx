@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,9 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Lazer_Xisual | Photography & Visual Storytelling",
+  title: "Lazer_Visual | Photography & Visual Storytelling",
   description:
-    "Explore the creative photography portfolio of Lazer_Xisual. Capturing portraits, lifestyle moments and timeless visual stories.",
+    "Explore the creative photography portfolio of Lazer_Visual. Capturing portraits, lifestyle moments and timeless visual stories.",
 };
 
 export default function RootLayout({
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
